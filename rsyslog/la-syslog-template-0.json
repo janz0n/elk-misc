@@ -1,0 +1,67 @@
+{
+  "index_patterns": ["*-syslog-*"],
+  "order": 1,
+  "mappings": {
+    "doc": {
+      "properties": {
+        "ecs" : {
+          "properties" : {
+            "version" : {
+              "type" : "keyword",
+              "ignore_above" : 10
+            }
+          }
+        },
+        "event" : {
+          "properties" : {
+            "created" : {
+              "type" : "date"
+            },
+            "facility" : {
+              "type" : "long"
+            },
+            "facility_label" : {
+              "type" : "keyword",
+              "ignore_above" : 10
+            },
+            "priority" : {
+              "type" : "long"
+            },
+            "program" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            },
+            "severity" : {
+              "type" : "long"
+            },
+            "severity_label" : {
+              "type" : "keyword",
+              "ignore_above" : 10
+            }
+          }
+        },
+        "host" : {
+          "properties" : {
+            "ip" : {
+              "type" : "ip"
+            },
+            "name" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "message" : {
+          "type" : "text"
+        },
+        "process" : {
+          "properties" : {
+            "pid" : {
+              "type" : "long"
+            }
+          }
+        }
+      }
+    }
+  }
+}
