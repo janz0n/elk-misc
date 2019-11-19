@@ -1,5 +1,5 @@
 {
-  "index_patterns": ["*-syslog-*"],
+  "index_patterns": ["syslog-*"],
   "order": 1,
   "mappings": {
     "doc": {
